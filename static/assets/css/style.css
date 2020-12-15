@@ -1,0 +1,14 @@
+.box{height:320px;}
+
+.img{
+  margin-left: 2vw;
+  width: 30vw;
+  height: 30vh;
+  float: left;
+  border-radius: 2%;
+ 
+}
+
+.graph{
+  border-bottom: 1px solid blakc;
+}

@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<!--
+	Theory by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Generic - Theory by TEMPLATED</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/assets/css/main.css" />
+    <link rel="stylesheet" href="../static/assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/mdb.min.css">
+    <!-- Plugin file -->
+    <link rel="stylesheet" href="../static/css/addons/datatables.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+      div > h1{
+          text-align: center;
+      }
+
+    </style>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">Bigtering</a>
+					<nav id="nav">
+						<a href="main.html">Home</a>
+						<a href="generic.html">Generic</a>
+						
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Result.1</h2>
+						<p>Using dictionary</p>
+					</header>
+				
+					<div class="flex flex-2">
+						<article>
+							<div class="image fit">
+								<h1>오류 단어 빈도 수</h1>
+                <canvas id="error_word"></canvas>
+							</div>
+							<header>
+								<h3>사전 기반 단어 수 분석</h3>
+							</header>
+							<p class="graph">가장 큰 오류를 차지하는 특수문자, 단모음, 단자음을 분석하는 프로그램을 통해 빈도 수 분석. </p>
+						</article>
+						<article>
+							<div class="image fit">
+								<h1>전체 오류 단어 비율</h1>
+                <canvas id="error_ratio"></canvas>
+							</div>
+							<header>
+								<h3>사전 기반 단어 비율 통계</h3>
+							</header>
+							<p class="graph">리뷰 데이터를 형태소(단어) 기준으로 분류 후 오류단어사전을 기준으로 전체 형태소 대비 오류 단어 비율 분석.</p>
+							
+						</article>
+					</div>
+				</div>
+      </section>
+
+      <!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Result.2</h2>
+						<p>Using Random forest algorithm </p>
+					</header>
+				
+					<div class="flex flex-2">
+						<article>
+							<div class="image fit">
+								<h1>문장 오류 분석 결과</h1>
+                <table class="table table-bordered table-striped mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">리뷰</th>
+                      <th scope="col">오류 여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>9월백신출시~~현실이 되면 좋겠네요~~    </td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>한국이 대단한게 자국백신도 계약하고 다른니라 제약회사도 선제적으로 계약하고 있다.</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>WHO말은 이제 신뢰할수 없어   </td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>옥스퍼드대랑 벡시텤이라는 회사 합작품인데 진매트릭스가 벡시텍 지분6프로 가지고잇다  </td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>큰일났다 아껴둔 정책푼단다</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>끔 테섭 찌질이는 이제 고독한 철수형한태 가서 함께하는 것이 바랍직하다</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+							</div>
+							<header>
+								<h3>Decision tree 기반 문장 오류 판단</h3>
+							</header>
+							<p class="graph">기존 리뷰데이터를 가지고 학습시킨 알고리즘을 통해 새로운 데이터 오류여부 판단.</p>
+						</article>
+						<article>
+							<div class="image fit">
+								<h1>모델 정확도</h1>
+                <p style="font-size: 50pt; color: cadetblue; text-shadow: cornflowerblue; margin-left: 11vw;">83.3%</p>
+							</div>
+							<header>
+								<h3>조금만 더 학습시키면 실전에서도 사용가능하겠어요!</h3>
+							</header>
+							<p class="graph">정교한 데이터 혹은 더 많은 데이터로 모델을 학습시켜야합니다.</p>
+							
+            </article>
+            
+            <article style="margin-top:20px">
+							<div class="image fit">
+								<h1>기사별 오류 갯수 분석</h1>
+                <canvas id="polarChart"></canvas>
+							</div>
+							<header>
+								<h3>기사별 오류 개수 비교</h3>
+							</header>
+							<p class="graph">모델을 통해 분석된 기사들의 오류 개수 비교</p>
+							
+            </article>
+            <article  style="margin-top:20px">
+							<div class="image fit">
+								<h1>뉴스 오류비율 비교</h1>
+                <canvas id="radarChart"></canvas>
+							</div>
+							<header>
+								<h3>여러 기사들의 오류 비율을 비교</h3>
+							</header>
+							<p class="graph">모델을 통해 분석된 기사들의 오류 비율 비교</p>
+							
+            </article>
+            
+					</div>
+				</div>
+      </section>
+
+
+      
+      <!-- <section id="three" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Result.3</h2>
+						<p>Using RNN algorithm </p>
+					</header>
+				
+					<div class="flex flex-2">
+						<article>
+							<div class="image fit">
+								<h1>분석결과</h1>
+                <canvas id="polarChart"></canvas>
+							</div>
+							<header>
+								<h3>Praesent placerat magna</h3>
+							</header>
+							<p class="graph">Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.</p>
+						</article>
+						<article>
+							<div class="image fit">
+								<img src="#" alt="Pic 02" />
+							</div>
+							<header>
+								<h3>Fusce pellentesque tempus</h3>
+							</header>
+							<p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna non comodo sodales tempus.</p>
+							<footer>
+								<a href="#" class="button special">More</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</section> -->
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="flex">
+						<div class="copyright">
+							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+						</div>
+						<ul class="icons">
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+							<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
+							<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+    <script src="../static/assets/js/jquery.min.js"></script>
+    <script src="../static/assets/js/skel.min.js"></script>
+    <script src="../static/assets/js/util.js"></script>
+    <script src="../static/assets/js/main.js"></script>
+
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script>
+    var ctx_error_word = document.getElementById('error_word').getContext('2d');
+    var errorChart = new Chart(ctx_error_word, {
+        type: 'bar',
+        data: {
+            labels: [{% for d in data %}"{{d}}",{% endfor %}],
+            datasets: [{
+                label: '빈도 수',
+                data: [{% for d in data1 %}"{{d}}",{% endfor %}],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+    </script>
+
+    <script>
+        var ctx_error_ratio = document.getElementById('error_ratio').getContext('2d');
+        
+        var errorChart1 = new Chart(ctx_error_ratio, {
+            "type":"doughnut",
+            "data":{
+                "labels":["정상단어","오류단어"],
+                "datasets":[{
+                    "label":"My First Dataset",
+                    "data":[{% for i in ratio %}"{{i}}",{% endfor %}],
+                    "backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205,86)"]
+                }]
+            }
+        });
+    </script>
+    <script>
+    //radar
+var ctxR = document.getElementById("radarChart").getContext('2d');
+var myRadarChart = new Chart(ctxR, {
+type: 'radar',
+data: {
+labels: ["자음", "모음", "단모음단자음", "띄어쓰기", "단어", "특수문자", "숫자"],
+datasets: [{
+label: "News 1",
+data: [65, 59, 90, 81, 56, 55, 40],
+backgroundColor: [
+'rgba(105, 0, 132, .2)',
+],
+borderColor: [
+'rgba(200, 99, 132, .7)',
+],
+borderWidth: 2
+},
+{
+label: "News 2",
+data: [28, 48, 40, 19, 96, 27, 100],
+backgroundColor: [
+'rgba(0, 250, 220, .2)',
+],
+borderColor: [
+'rgba(0, 213, 132, .7)',
+],
+borderWidth: 2
+}
+]
+},
+options: {
+responsive: true
+}
+});
+    </script>
+    <script>
+      //polar
+var ctxPA = document.getElementById("polarChart").getContext('2d');
+var myPolarChart = new Chart(ctxPA, {
+type: 'polarArea',
+data: {
+labels: ["기사1", "기사2", "기사3", "기사4", "기사5"],
+datasets: [{
+data: [300, 50, 100, 40, 120],
+backgroundColor: ["rgba(219, 0, 0, 0.1)", "rgba(0, 165, 2, 0.1)", "rgba(255, 195, 15, 0.2)",
+"rgba(55, 59, 66, 0.1)", "rgba(0, 0, 0, 0.3)"
+],
+hoverBackgroundColor: ["rgba(219, 0, 0, 0.2)", "rgba(0, 165, 2, 0.2)",
+"rgba(255, 195, 15, 0.3)", "rgba(55, 59, 66, 0.1)", "rgba(0, 0, 0, 0.4)"
+]
+}]
+},
+options: {
+responsive: true
+}
+});
+    </script>
+<script src="./js/addons/datatables.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/popper.min.js"></script>
+<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/js/mdb.min.js"></script>
+<!-- Plugin file -->
+
+    
+</html>

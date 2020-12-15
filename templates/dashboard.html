@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="header">
+      <!--add header -->
+    </div>
+    <div class="dashboard-title">
+      <h2>161만건의 데이터, 98.4%의 만족도</h2>
+      <h1>데이터 품질 분류기, 빅터링</h1>
+    </div>
+    <div class="url-searchbox_container">
+      <div class="url-searchbox">
+        <form action="/post" method="post">
+          <input
+            class="url-inputbox"
+            type="text"
+            name="url_input"
+            placeholder="URL을 입력하세요."
+          />
+          <input type="submit" value="정보 넘기기" />
+        </form>
+      </div>
+    </div>
+    <div class="select-category">
+      <span style="font-size: 12px">-- 또는 --</span>
+      <div class="category">
+        <a href="#" class="category_link">카테고리로 검색하기</a>
+        <div class="category-container">
+          <ul>
+            <li>
+              <a class="category_link naver_news" href="#">네이버 뉴스</a>
+              <form class="category_form naver_news">
+                <input class="naver_news" type="text" />
+              </form>
+            </li>
+            <li>
+              <a class="category_link daum_news" href="#">다음 뉴스</a>
+              <form class="category_form daum_news">
+                <input class="daum_news" type="text" />
+              </form>
+            </li>
+            <li>
+              <a class="category_link naver_movie" href="#">네이버 영화리뷰</a>
+              <form class="category_form naver_movie">
+                <input class="naver_movie" type="text" />
+              </form>
+            </li>
+            <li>
+              <a class="category_link daum_movie" href="#">다음 영화리뷰</a>
+              <form class="category_form daum_movie">
+                <input class="daum_movie" type="text" />
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dashboard.js"></script>
+  </body>
+</html>

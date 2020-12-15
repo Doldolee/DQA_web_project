@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <style>
+        div > h1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>오류 단어 빈도 수</h1>
+        <canvas id="error_word"></canvas>
+    </div>
+    <div>
+        <h1>전체 오류 단어 비율</h1>
+        <canvas id="error_ratio"></canvas>
+    </div>
+
+
+    <script>
+    var ctx_error_word = document.getElementById('error_word').getContext('2d');
+    var errorChart = new Chart(ctx_error_word, {
+        type: 'bar',
+        data: {
+            labels: [{% for d in data %}"{{d}}",{% endfor %}],
+            datasets: [{
+                label: '빈도 수',
+                data: [{% for d in data1 %}"{{d}}",{% endfor %}],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+    </script>
+
+    <script>
+        var ctx_error_ratio = document.getElementById('error_ratio').getContext('2d');
+        
+        var errorChart1 = new Chart(ctx_error_ratio, {
+            "type":"doughnut",
+            "data":{
+                "labels":["정상단어","오류단어"],
+                "datasets":[{
+                    "label":"My First Dataset",
+                    "data":[{% for i in ratio %}"{{i}}",{% endfor %}],
+                    "backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205,86)"]
+                }]
+            }
+        });
+    </script>
+
+
+
+
+</body>
+</html>
