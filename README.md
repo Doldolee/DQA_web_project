@@ -27,4 +27,4 @@
 ### 프로젝트 성과
 2020 한이음 공모전에서 입선 수상
 
-https://www.youtube.com/watch?v=WSDuwuAXlxM
+영상: https://www.youtube.com/watch?v=WSDuwuAXlxM
